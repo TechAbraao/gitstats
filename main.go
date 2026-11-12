@@ -1,6 +1,6 @@
 package main
 
-import "gitstats/gitstats/cmd"
+import "gitstats/cmd"
 
 func main() {
     cmd.Execute()
