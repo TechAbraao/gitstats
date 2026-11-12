@@ -27,7 +27,6 @@ O projeto tem como principais objetivos:
 |---|---|
 | Go (Golang) | Linguagem principal |
 | Cobra | Gerenciamento de comandos e subcomandos da CLI |
-| Gin | Comunicação HTTP com a GitHub API |
 | encoding/json | Serialização e desserialização JSON |
 | Lip Gloss | Estilização e formatação do terminal |
 | Viper | Gerenciamento de configurações |
