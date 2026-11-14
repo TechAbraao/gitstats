@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: https://api.github.com/users/TechAbraao
+  url: https://api.github.com/users/TechAbraaod
   auth: inherit
 
 settings:

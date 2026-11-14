@@ -29,6 +29,6 @@ func PrintRepositoryInfo(info RepositoryInfo) {
 
 func PrintRepositoryInfoNotFound() {
 	fmt.Println()
-	fmt.Println("[X] There is no instance of this repository for this user" )
+	fmt.Println("[X] There is no instance of this repository for this user." )
 	fmt.Println()
 }
