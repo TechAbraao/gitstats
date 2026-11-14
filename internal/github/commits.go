@@ -28,15 +28,17 @@ func lastPage(link string) (int, error) {
 	return 0, fmt.Errorf("rel=last não encontrado")
 }
 
-func GetCountCommitsInfo(client *Client, repository string) (int, error) {
+func GetCountCommitsInfo(client *Client, repository string) (int, error, int) {
 	resp, err := client.httpClient.Get("https://api.github.com/repos/" + repository + "/commits?per_page=1")
 
 	if err != nil {
-		return 0, err
+		return 0, err, 0
 	}
 	
 	defer resp.Body.Close()
+	
+	var statusCode int = resp.StatusCode
 	commitsRepository, err := lastPage(resp.Header.Get("Link"))
 
-	return commitsRepository, nil
+	return commitsRepository, nil, statusCode
 }

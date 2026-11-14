@@ -15,13 +15,14 @@ var commitsCmd = &cobra.Command{
         repository := args[0]
 
         client := github.NewClient()
-        body, err := github.GetCountCommitsInfo(client, repository)
+        body, err, statusCode := github.GetCountCommitsInfo(client, repository)
         if err != nil {
             return err
         }
 
         allComits := output.CommitsInfo{
             Commits: body,
+            StatusCode: statusCode,
         }
 
         output.PrintAllCommitsInRepository(allComits)
